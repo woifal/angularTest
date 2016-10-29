@@ -25,10 +25,10 @@ export class HeroDetailComponent implements OnInit {
 	) {}
 
 	ngOnInit(): void {
-	  alert("init hero-detail-component..");
+	  console.log("init hero-detail-component..");
 	  this.route.params.forEach((params: Params) => {
 		let id = +params['id'];
-		alert("showing hero >" + id + "<");
+		console.log("showing hero >" + id + "<");
 		this.heroService.getHero(id)
 		  .then(hero => this.hero = hero);
 	  });
@@ -36,6 +36,12 @@ export class HeroDetailComponent implements OnInit {
 
 	goBack(): void {
 		this.location.back();
+	}
+	
+	save(): void {
+		this.heroService.update(this.hero)
+		.then(() => this.goBack())
+		.then(() => console.log("saved and went back."));
 	}
 }
 
