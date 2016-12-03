@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroService }         from './hero.service';
 import { AppComponent }  from './app.component';
 import { HeroSearchComponent } from './hero-search.component';
+import { FooAuthGuard }     from './foo-auth-guard.service';
 
 import { RouterModule }   from '@angular/router';
 
@@ -35,12 +36,10 @@ import { InMemoryDataService }  from './in-memory-data.service';
 		, DashboardComponent
 		, HeroSearchComponent
     ],
-	
-	
-	
-	
-    providers: [
-        HeroService    ],
+	providers: [
+        FooAuthGuard
+        ,HeroService
+    ],
    	bootstrap: [AppComponent]
 })
 export class AppModule { }
