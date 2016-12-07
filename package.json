@@ -35,6 +35,8 @@
     "@angular/router": "~3.1.1",
     "@angular/upgrade": "~2.1.1",
 
+    "@vaadin/angular2-polymer": "^1.0.0-beta5",
+
     "angular-in-memory-web-api": "~0.1.13",
     "bootstrap": "^3.3.7",
     "systemjs": "0.19.39",

@@ -4,7 +4,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     moduleId: module.id
 	, selector: 'my-app'
-    , template: `
+    , templateUrl: "app.component.html"
+	/*
+	: `
     <h1>{{title}}</h1>
 
 	<nav>
@@ -13,9 +15,9 @@ import { Component, OnInit } from '@angular/core';
 	</nav>
 	
 	<router-outlet></router-outlet>
-  `
+  `*/
 	, styleUrls: ['app.component.css']
 })
 export class AppComponent {
-    title = 'Tour of Heroes';
+    title = 'Angular Kurt';
 }
